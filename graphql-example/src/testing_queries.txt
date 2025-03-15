@@ -1,0 +1,25 @@
+query {
+  books {
+    title
+    author
+    published_at
+  }
+}
+
+mutation {
+  addBook(title: "Bases de compiladores", author: "Luis Espino") {
+    title
+    author
+  }
+}
+
+query{
+  booksByAuthor(author: "J.K. Rowling") {
+    author
+    title
+  }
+}
+
+mutation {
+  deleteBookByTitle(title: "Bases de compiladores")
+}
